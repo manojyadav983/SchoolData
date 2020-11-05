@@ -96,7 +96,7 @@ class AddUpdateUserDetailsActivity : AppCompatActivity(), View.OnClickListener {
     private fun setOnClickListener() {
         binding.btnAddUpdate.setOnClickListener(this)
         binding.btnDelete.setOnClickListener(this)
-        binding.ivUserImage.setOnClickListener(this)
+        binding.uploadImage.setOnClickListener(this)
 
         binding.etRollNumber.editText!!.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
@@ -230,7 +230,7 @@ class AddUpdateUserDetailsActivity : AppCompatActivity(), View.OnClickListener {
                 mUserViewModel.deleteUser(userEditModel)
                 finish()
             }
-            R.id.ivUserImage -> {
+            R.id.uploadImage -> {
                 if (permissionIfNeeded()) {
                     getGalleryImage()
                 }
